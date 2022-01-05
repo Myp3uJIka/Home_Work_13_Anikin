@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
@@ -14,9 +14,9 @@
     <form action="post_by_tag.html">
         <p>По тегу</p>
         <select name="tag" >
-                <option value="еда">еда</option>
-                <option value="природа">природа</option>
-                <option value="вечеринка">вечеринка</option>
+            {% for tag in tags_list %}
+                <option value="{{tag}}"> {{ tag }} </option>
+            {% endfor %}
         </select>
         <input type="submit" value="Найти" class="button">
     </form>
