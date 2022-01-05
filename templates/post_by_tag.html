@@ -13,7 +13,7 @@
     <h1>Посты по тегу “{{tag}}”</h1>
 
     {% for post1 in content %}
-    <div class="post">
+    <div class="post_by_tag">
         <img src="{{ post1['pic'] }}" width="100%" alt="">
         <p>{{ post1['content'] }}</p>
     </div>
@@ -22,7 +22,7 @@
 
     {% endfor %}
 
-    <a href="post_form.html" class="button">Добавить пост</a>
+    <a href="/post" class="button">Добавить пост</a>
 
 </main>
 </body>
